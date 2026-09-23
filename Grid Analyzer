@@ -1,0 +1,16 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <sstream>
+using namespace std;
+
+struct Data {   // to save multiple data points
+        string date;
+        int demand;
+    };
+
+int main() {
+    while()
+    
+    ifstream file("ercot_demand.csv");
+}
