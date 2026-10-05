@@ -6,11 +6,39 @@ using namespace std;
 
 struct Data {   // to save multiple data points
         string date;
-        int demand;
+        double demand;
+        string time;
     };
 
 int main() {
-    while()
     
-    ifstream file("ercot_demand.csv");
+    ifstream file("ercot_demand.csv"); // open input file
+
+    if(!file) {
+        cout << "Error opening file" << endl; // display error message
+        return;
+    }
+
+    cout << "What is the date you are looking for? " << endl;
+    string ercotdate;
+    cin >> ercotdate;
+
+    vector<Data> datas;
+    string line;
+
+    string header;
+    getline(file,header); // stores header line in header to essentially skip it.
+     
+    while(getline(file, line)) { //  read file line by line 
+        stringstream ss(line);
+        Data datas;
+        datas.date = line.substr(0,10);
+        datas.time = line.substr(11,13);
+        datas.demand = stod(line.substr(15,19));
+
+        if()
+        
+    }
+
+
 }
