@@ -18,7 +18,7 @@ int main() {
         cout << "Error opening file" << endl; // display error message
         return;
     }
-
+// by addding
     cout << "What is the date you are looking for? " << endl;
     string ercotdate;
     cin >> ercotdate;
